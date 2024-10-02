@@ -108,3 +108,5 @@ if numero_primo(num):
     print("Es primo")
 else:
     print("No es primo")
+
+#https://github.com/CamiAilenn/Progra_Uno/blob/main/06_Funciones_recursivas.py
