@@ -4,6 +4,11 @@
 #Cada celda (fila/columna) muestra la ubicación de cada producto, ejemplo: en (1,2)
 #se guardan las botellas, etc.
 #Armar la lista de Productos con nombre, cantidad y ubicación (fila, columna)
+
+
+
+
+
 #Ejercicio 2-Armar el siguiente menú de opciones:
 #1-Alta de productos (producto nuevo)
 #2-Baja de productos (producto existente)
@@ -11,7 +16,17 @@
 #4-Listar productos
 #5-Lista de productoss ordenado por nombre
 #6-Salir
+
+
+
+
+
 #Ejercicio 3: Crear una función para cada opción de menú.
+
+
+
+
+
 #Ejercicio 4: Desarrollar las funciones en una biblioteca.
 #Nota: No se podrá acceder a “Baja de productos” ni “Modificar productos” del menú si 
 #no se realizó un “Alta de productos”.

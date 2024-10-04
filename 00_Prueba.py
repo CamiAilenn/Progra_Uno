@@ -13,6 +13,8 @@
 #8-Listar nombre, mail y teléfono de los usuarios italianos mayores a 40 años.
 
 from Archivo_con_listas import *
+import Modulos_y_Paquetes.Funciones_Cami as PAQ
+
 
 #1-Importar listas
 nombres_copia = nombres
@@ -46,6 +48,15 @@ def mostrar_datos_de_lista_de_posiciones(lista:list, nombre:list, telefono:list,
         for i in range(len(lista)):
             mostrar_datos_una_posicion(lista[i], nombre, telefono, mail, address, postalZip, region, country, edad)
 
+def mostrar_nombre_mail_telefono(lista, nombre:list, telefono:list, mail:list):
+    "Muestra nombre-mail-telefono de los usuarios del pais ingresado por un input"
+    print("Nombre y apellido          mail              telefono        pais  ")   
+    if len(lista) == 0:
+        print("No hay datos en la lista")
+    else:
+        for i in range(len(lista)):
+            print(nombre[lista[i]],"   ",mail[lista[i]] , "   ", telefono[lista[i]],)
+
 #2-Listar los datos de los usuarios de México
 
 def datos_usuarios_por_pais_parametro(pais, nombre:list, telefono:list, mail:list, address:list, 
@@ -60,7 +71,6 @@ def datos_usuarios_por_pais_parametro(pais, nombre:list, telefono:list, mail:lis
 pais ="Mexico"
 datos_usuarios_por_pais_parametro(pais, nombres_copia, telefonos_copia, mails_copia, 
                                   address_copia, postalZip_copia, region_copia, country_copia, edades_copia)
-
 
 
 #Lo realice generico, para que muestre los datos de los usuarios
@@ -170,18 +180,18 @@ mostrar_datos_de_lista_de_posiciones(armar_lista_usuarios_mayores_por_pais("Bras
 #7-Listar los datos de los usuarios de México y Brasil cuyo código postal 
 #sea mayor a 8000
 
-def armar_lista_posiciones_mayores_a_valor (minimo:int, lista:list)->list:
+'''def armar_lista_posiciones_mayores_a_valor (minimo:int, lista:list)->list:
     """Recibe un minimo y una lista por parametro, 
     retorna una lista con las posiciones que tienen un numero mayor al indicado"""
     lista_posiciones_mayores = []
     for i in range(len(lista)):
         if lista[i] >= minimo:
             lista_posiciones_mayores.append(i)
-    return lista_posiciones_mayores
+    return lista_posiciones_mayores'''
 #print(armar_lista_posiciones_mayores_a_valor(8000, postalZip_copia))
 
 
-def armar_lista_posiciones_usuarios_paises_mayores(pais:list,):
+def armar_lista_posiciones_usuarios_paises_mayor_codigo_postal(pais:list, codigo_postal:list)->list:
     """Busca usuarios de dos paises y luego busca que el codigo postal 
     sea mayor a un minimo. 
     Retorna una lista con las posiciones que cumplan las dos condiciones"""
@@ -190,11 +200,22 @@ def armar_lista_posiciones_usuarios_paises_mayores(pais:list,):
     lista_posiciones_usuarios_paises_mayores = []
     for i in range (len(pais)):
         if pais[i] == pais_uno or pais [i] == pais_dos:
-            if
+            if codigo_postal[i] > 8000:
+                lista_posiciones_usuarios_paises_mayores.append(i)
+    return lista_posiciones_usuarios_paises_mayores
 
+mostrar_datos_de_lista_de_posiciones(armar_lista_posiciones_usuarios_paises_mayor_codigo_postal(country_copia, postalZip_copia), nombres, telefonos, mails, address, postalZip, region, country, edades)
 
+#8-Listar nombre, mail y teléfono de los usuarios italianos mayores a 40 años.
 
+def mostrar_nombre_mail_telefono_por_pais_mayores_edad(nombre:list, telefono:list, mail:list, country:list, edad:list):
+    """Muestra nombre-mail-telefono de los usuarios del pais ingresado por un input
+    y valida que sean mayores de edad"""
+    pais = str(input("Ingrese el PAIS, de las personas que quiere obtener datos: ")).capitalize()
+    print("Nombre y apellido          mail              telefono        pais  ")   
+    for i in range (len(country)):
+        if pais == country[i]:
+            if edad[i] >= 40:
+                print(nombre[i],"   ",mail[i] , "   ", telefono[i],"   ", country[i])
 
-#8-Listar nombre, mail y teléfono de los usuarios italianos mayores a 40 
-#años.
-
+#mostrar_nombre_mail_telefono_por_pais_mayores_edad(nombres_copia,telefonos_copia,mails_copia,country_copia,edades_copia)
