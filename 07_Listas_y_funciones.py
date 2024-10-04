@@ -145,5 +145,9 @@ print(resultado)
 #sea mayor a 8000
 #8-Listar nombre, mail y teléfono de los usuarios italianos mayores a 40 
 #años.
+
+
+
+
 #Ejercicio 8: Crear una función para cada opción de menú.
 #Ejercicio 9: Desarrollar las funciones en una biblioteca.
