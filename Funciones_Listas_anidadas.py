@@ -1,65 +1,3 @@
-from Funciones_Listas_anidadas import *
-import Modulos_y_Paquetes.Funciones_Cami as PAQ
-
-#Ejercicio 1: El almacén de barrio nos pide un programa para almacenar, ordenar y 
-#controlar stock de su mercadería por día.
-#Comienza el día con la siguiente disposición en su góndola:
-#Cada celda (fila/columna) muestra la ubicación de cada producto, ejemplo: en (1,2)
-#se guardan las botellas, etc.
-#Armar la lista de Productos con nombre, cantidad y ubicación (fila, columna)
-stock_almacen = [[[],[],[],[],[]],
-                [[],[],[],[],[]],
-                [[],[],[],[],[]]
-                ]
-
-stock_almacen [0][1] = ["Botellas", 3, [1, 2]]
-stock_almacen [0][3] = ["Frascos", 8, [1, 4]]
-stock_almacen [1][2] = ["Fideos", 4, [2, 3]]
-stock_almacen [2][3] = ["Leches", 6, [3, 4]]
-
-for i in range(len(stock_almacen)):
-    for j in range(len(stock_almacen[i])):
-        print(stock_almacen[i][j], end = "    ")
-    print(" ")
-
-for i in range(len(stock_almacen)):
-    print(stock_almacen[i])
-
-#Ejercicio 2-Armar el siguiente menú de opciones:
-#1-Alta de productos (producto nuevo)
-#2-Baja de productos (producto existente)
-#3-Modificar productos (cantidad, ubicación)
-#4-Listar productos
-#5-Lista de productoss ordenado por nombre
-#6-Salir
-
-
-menu = "s"
-
-while menu == "s":
-    opcion = int(mostrar_menu_almacen())
-    if opcion == 1:
-        alta_productos(stock_almacen)
-    elif opcion == 2:
-        baja_productos(stock_almacen)
-    elif opcion == 3:
-        modificar_productos(stock_almacen)
-    elif opcion == 4:
-        listar_productos(stock_almacen)
-    elif opcion == 5:
-        listar_productos_ordenado_por_nombre(stock_almacen)
-    elif opcion == 6:
-        menu = "n"
-    else:
-        print("Numero ingresado no valido")
-        opcion = mostrar_menu_almacen()
-        
-print("Ya Sali")
-
-
-
-#Ejercicio 3: Crear una función para cada opción de menú.
-
 def mostrar_menu_almacen()->int:
        """Muestra el menu de opciones del almacen
        Retorna la opcion ingresada por el usuario"""
@@ -119,17 +57,17 @@ def baja_productos(lista:list):
 
 def modificar_productos(lista:list):
        
-        print("Usted dara de modificarala cantidad y/o ubicacion de un producto.")
-        fila_original = int(input("¿En que fila se encuentra? "))
-        while fila_original <= 0 or fila_original > 3:
-             fila_original = int(input("DATO NO VALIDO ¿En que fila se encuentra? "))
-        columna_original = int(input("¿En que columna se encuentra? "))
-        while columna_original <= 0 or columna_original > 5:
-             columna_original = int(input("DATO NO VALIDO ¿En que columna se encuentra? "))
+      print("Usted dara de modificarala cantidad y/o ubicacion de un producto.")
+      fila_original = int(input("¿En que fila se encuentra? "))
+      while fila_original <= 0 or fila_original > 3:
+            fila_original = int(input("DATO NO VALIDO ¿En que fila se encuentra? "))
+      columna_original = int(input("¿En que columna se encuentra? "))
+      while columna_original <= 0 or columna_original > 5:
+            columna_original = int(input("DATO NO VALIDO ¿En que columna se encuentra? "))
 
-        if len(lista[fila_original-1][columna_original-1]) == 0:
+      if len(lista[fila_original-1][columna_original-1]) == 0:
             print("No hay producto para modificar")
-        else:
+      else:
             print("Usted modificara el producto", lista[fila_original-1][columna_original-1][0])
 
             modificar_cantidad = str(input("¿Quiere modificar la cantidad? s/n")).lower()
@@ -155,7 +93,7 @@ def modificar_productos(lista:list):
             else:
                 print("Ubicacion ocupada por otro producto, volvera al menu principal")
        
-        for i in range(len(lista)):
+      for i in range(len(lista)):
             print(lista[i])
 
 
@@ -167,9 +105,9 @@ def listar_productos(lista:list):
                   print(lista[i][j], end ="      ")
             print(" ")
       
-"""      print("Otra alternativa")
+'''      print("Otra alternativa")
       for i in range (len(lista)):
-            print(f"{lista[i][0]:<{15}}|   {lista[i][1]:<{15}}|   {lista[i][2]:<{15}}")"""
+            print(f"{lista[i][0]:<{15}}|   {lista[i][1]:<{15}}|   {lista[i][2]:<{15}}")'''
 
 
 
@@ -183,6 +121,8 @@ def armar_lista_con_produtos(lista:list)->list:
       #print(lista_nueva)
       return lista_nueva
 
+import Modulos_y_Paquetes.Funciones_Cami as PAQ
+
 def listar_productos_ordenado_por_nombre(lista:list):
       lista_solo_con_productos = armar_lista_con_produtos(lista)
       for i in range(len(lista)-1):
@@ -193,71 +133,10 @@ def listar_productos_ordenado_por_nombre(lista:list):
       for i in range(len(lista_solo_con_productos)):
             print(lista_solo_con_productos[i])
 
-#Ejercicio 4: Desarrollar las funciones en una biblioteca.
-#Nota: No se podrá acceder a “Baja de productos” ni “Modificar productos” del menú si 
-#no se realizó un “Alta de productos”.
 
-#-------------------------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------------
+#Ejercicio ferreteria
 
-estanteria = [[[], [], [], []],
-                    [[], [], [], []],
-                    [[], [], [], []],
-                    [[], [], [], []]
-                    ]
-
-estanteria [0][0]= ["to12", 65]
-estanteria [0][1]= ["to16", 86]
-estanteria [0][2]= ["to20", 65]
-estanteria [0][3]= ["to25", 45]
-estanteria [1][0]= ["to30", 68]
-estanteria [1][1]= ["to35", 73]
-estanteria [1][2]= ["to40", 85]
-estanteria [1][3]= ["to45", 89]
-estanteria [2][0]= ["ta4", 58]
-estanteria [2][1]= ["ta5", 48]
-estanteria [2][2]= ["ta6", 64]
-estanteria [2][3]= ["ta7", 96]
-estanteria [3][0]= ["ta8", 36]
-estanteria [3][1]= ["ta10", 72]
-estanteria [3][2]= ["ta12", 78]
-estanteria [3][3]= ["ta14", 71]
-
-for i in range(len(estanteria)):
-     print(estanteria[i])
-
-#Ejercicio 5: Desarrollar un programa para el control de stock de una ferretería para 
-#sus artículos de tornillos y tarugos. Los mismos se encuentran almacenados en una 
-#cajonera de ferretería metálica con cajones.
-#Armar la lista estantería para contener los cajones con listas anidadas.
-#Ejercicio 6-Armar el siguiente menú de opciones:
-#1- Reponer mercadería (productos existentes)
-#2- Vender mercadería (producto existente, solo si alcanza el stock)
-#3- Listar inventario
-#5- Salir
-
-continuar = "s"
-while continuar == "s":
-    opcion = int(input("""
-    Opcion 1: Reponer mercadería (productos existentes)
-    Opcion 2: Vender mercadería (producto existente, solo si alcanza el stock)
-    Opcion 3: Listar inventario
-    Opcion 4: Salir 
-                       
-            Elija la opcion deada: """))
-    if opcion < 1 or opcion > 4:
-        print("Opcion no valida, vuelva a intentarlo")
-    elif opcion == 1:
-        reponer_mercaderia(estanteria)
-    elif opcion == 2:
-        vender_mercaderia(estanteria)
-    elif opcion == 3:
-        listar_inventario(estanteria)
-    else:
-        continuar == "n"
-
-print("YA sali")
-
-#Ejercicio 7: Crear una función para cada opción de menú.
 def reponer_mercaderia(lista:list):
       """Solicita ubicacion de un producto(fila/columna)
       Si no existe prodcuto sale de la funcion
@@ -323,5 +202,3 @@ def listar_inventario(lista:list):
       for i in range(len(lista)):
             for j in range (len(lista[i])):
                   print(f"Del producto {lista[i][j][0]} hay {lista[i][j][1]} piezas")
-
-#Ejercicio 8: Desarrollar las funciones en una biblioteca

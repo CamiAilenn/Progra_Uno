@@ -353,3 +353,6 @@ def mostrar_nombre_mail_telefono_por_pais_mayores_edad(nombre:list, telefono:lis
                 print(nombre[i],"   ",mail[i] , "   ", telefono[i],"   ", country[i])
 
 #mostrar_nombre_mail_telefono_por_pais_mayores_edad(nombres_copia,telefonos_copia,mails_copia,country_copia,edades_copia)
+
+
+#https://github.com/CamiAilenn/Progra_Uno/blob/main/07_Listas_y_funciones.py
