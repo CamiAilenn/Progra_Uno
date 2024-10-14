@@ -58,3 +58,4 @@ def char_at(cadena:str,posicion:int)->str:
 print(char_at(cadena,100))"""
 
 
+#https://github.com/CamiAilenn/Progra_Uno/blob/main/10_Cadena_de_Caracteres_uno.py

@@ -202,3 +202,5 @@ def listar_inventario(lista:list):
       for i in range(len(lista)):
             for j in range (len(lista[i])):
                   print(f"Del producto {lista[i][j][0]} hay {lista[i][j][1]} piezas")
+
+#https://github.com/CamiAilenn/Progra_Uno/blob/main/Funciones_Listas_anidadas.py

@@ -149,3 +149,7 @@ subcadena = "pan"
 print(buscar_subcadena_en_cadena(cadena,subcadena))
 
 
+
+#https://github.com/CamiAilenn/Progra_Uno/blob/main/11_Cadena_de_Caracteres_dos.py
+
+

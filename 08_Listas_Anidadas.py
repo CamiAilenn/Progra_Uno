@@ -325,3 +325,5 @@ def listar_inventario(lista:list):
                   print(f"Del producto {lista[i][j][0]} hay {lista[i][j][1]} piezas")
 
 #Ejercicio 8: Desarrollar las funciones en una biblioteca
+
+#https://github.com/CamiAilenn/Progra_Uno/blob/main/08_Listas_Anidadas.py
