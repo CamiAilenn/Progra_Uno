@@ -6,3 +6,95 @@ postalZip =[41407,851287,3658,16424,727461,53387,7071,2153,30602,53710,7274,374,
 region = ['Yucatan','Cancun','Dalarnas lan','Noord Brabant','La Toscana','Maceio','Murmansk Oblast','Lambayeque','San Jose','South Island','Bihar','Aquitaine','Maharastra','Florianopolis','Leinster','Zuid Holland','West Region','Queretaro','Gia Lai','Podkarpackie','Vastra Gotalands lan','Caqueta','Languedoc-Roussillon','Alajuela','El Dorado','Sanliurfa','Rio de Janeiro','Nordland','Balochistan','Hessen','Dongbei','Central Visayas','Venecia','Rio de Janeiro','Florencia','Izmir','Cartago','South Australia','Mpumalanga','Utrecht','Choco','Lang Son','Anambra','More og Romsdal','Rostov Oblast','Marche','Oost-Vlaanderen','Chernihiv oblast','More og Romsdal','Rivers']
 country =['Ukraine','Mexico','Russian Federation','Pakistan','Italy','Brazil','Sweden','United States','Mexico','Chile','Poland','Pakistan','Philippines','Brazil','Costa Rica','Australia','Netherlands','Netherlands','Netherlands','New Zealand','New Zealand','United Kingdom','France','Pakistan','Mexico','Philippines','Brazil','Philippines','Belgium','Singapore','Costa Rica','Sweden','Italy','Brazil','Italy','Turkey','Australia','Singapore','Spain','Russian Federation','United States','Costa Rica','Singapore','France','Colombia','Germany','Turkey','Sweden','Vietnam','Vietnam']
 edades=[20, 57, 37, 57, 24, 59, 51, 40, 29, 49, 60, 26, 52, 58, 49, 56, 20, 60, 35, 22, 31, 47, 44, 29, 60, 36, 48, 27, 48, 50, 29, 26, 47, 47, 42, 53, 38, 50, 52, 57, 35, 53, 47, 21, 28, 55, 20, 58, 25, 29]
+
+estudiantes=[{
+  "legajo": 1,
+  "nombre": "Juan",
+  "apellido": "Linarez",
+  "edad": 21,
+  "notas": [    8,    9,    6  ],
+  "programa": { "nombre": "Ingenieria en Informatica", "nivel": "pregrado" },
+  "grupos": [    {"nombre": "Club de Ajedrez","descripcion": "Grupo de jugadores de Ajedrez"},
+    			{"nombre": "Club de Informatica","descripcion": "Grupo para fanaticos de Tecnologia"}]
+},
+{
+  "legajo": 2,
+  "nombre": "Carla",
+  "apellido": "Salas",
+  "edad": 18,
+  "notas": [    7,    5  ],
+  "programa": {"nombre": "Medicina","nivel": "pregrado"},
+  "grupos": [ {"nombre": "Club de Volleyball","descripcion": "Equipo de Volleyball de la universidad."} ]
+},
+{
+  "legajo": 3,
+  "nombre": "Jorge",
+  "apellido": "Rodriguez",
+  "edad": 31,
+  "notas": [    4,    9,    6  ],
+  "programa": {"nombre": "Ingenieria Civil","nivel": "postgrado"}
+},
+{
+  "legajo": 4,
+  "nombre": "Maria",
+  "apellido": "Sandoval",
+  "edad": 24,
+  "notas": [   6,    7,    6,    5  ],
+  "programa": {"nombre": "Ingenieria en Informatica","nivel": "pregrado"},
+  "grupos": [{"nombre": "Club de Informatica","descripcion": "Grupo para fanaticos de Tecnologia" }]
+},
+{
+  "legajo": 5,
+  "nombre": "William",
+  "apellido": "Smith",
+  "edad": 25,
+  "notas": [    6,    5,    8  ],
+  "programa": {"nombre": "Bachiller","nivel": "pregrado"},
+  "grupos": [{"nombre": "Club de PS4","descripcion": "Grupo de jugadores de Playstation 4"}]
+},
+{
+  "legajo": 6,
+  "nombre": "Juan",
+  "apellido": "Gomez",
+  "edad": 21,
+  "notas": [   8,    9,    6  ],
+  "programa": {"nombre": "Ingenieria en Informatica","nivel": "pregrado"},
+  "grupos": [{"nombre": "Club de Ajedrez","descripcion": "Grupo de jugadores de Ajedrez"},
+  			{"nombre": "Club de Informatica","descripcion": "Grupo para fanaticos de Tecnologia"} ]
+},
+{
+  "legajo": 7,
+  "nombre": "Maria",
+  "apellido": "Cadenas",
+  "edad": 18,
+  "notas": [    5,    4  ],
+  "programa": {"nombre": "Medicina","nivel": "pregrado"},
+  "grupos": [{"nombre": "Club de Volleyball","descripcion": "Equipo d eVolleyball de la universidad."}]
+},
+{
+  "legajo": 8,
+  "nombre": "Jorge",
+  "apellido": "Ayala",
+  "edad": 31,
+  "notas": [    4,    9,    6  ],
+  "programa": {"nombre": "Ingenieria Civil","nivel": "postgrado"}
+},
+{
+  "legajo": 9,
+  "nombre": "Luis",
+  "apellido": "Sandoval",
+  "edad": 24,
+  "notas": [    5,    7,    6,    4  ],
+  "programa": {"nombre": "Ingenieria en Informatica","nivel": "pregrado"},
+  "grupos": [{"nombre": "Club de Informatica","descripcion": "Grupo para fanaticos de Tecnologia" }]
+},
+{
+  "legajo": 10,
+  "nombre": "Marcos",
+  "apellido": "Rojo",
+  "edad": 29,
+  "notas": [    6,    8,    7  ],
+  "programa": {"nombre": "Bachiller","nivel": "pregrado"},
+  "grupos": [{"nombre": "Club de PS4","descripcion": "Grupo de jugadores de Playstation 4"}]
+}
+]
